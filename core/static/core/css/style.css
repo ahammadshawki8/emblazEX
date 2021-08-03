@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    line-height: 1.6em;
+    font-family: Helvetica, Arial, sans-serif;
+    text-align: center;
+    background-color: #f74036;
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.layout {
+    background-color: rgba(51, 51, 51, 1);
+    margin: 30px auto;
+    padding: 50px;
+    max-width: 400px;
+    border-radius: 10px;
+}
+
+.holder {
+    min-width: 300px;
+    max-height: 250px;
+    background-color: white;
+    overflow-y: scroll;
+    border-radius: 10px;
+    margin-bottom: 80px;
+}
+
+.info {
+    color: black;
+}
+
+.title {
+    margin-top: 40px;
+}
+
+input {
+    max-width: 200px;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+textarea {
+    max-width: 300px;
+    padding: 5px;
+    border-radius: 10px;
+    margin-bottom: 40px;
+}
+
+.btn-dangerx {
+    background-color: #f74036;
+    color: white;
+    transition-property: all;
+    transition-duration: 0.5s;
+    min-width: 250px;
+}
+
+.btn-dangerx:hover {
+    transform: scale(1.2);
+    color: white;
+}
+
+.ex {
+    color: #f74036;
+    animation-fill-mode: forwards;
+    animation-duration: 2s;
+    animation-delay: 1s;
+    animation-name: live;
+    font-size: 50px;
+    animation-iteration-count: infinite;
+}
+
+@keyframes live {
+    0% {color: #f74036}
+    50% {color: #fff}
+    100% {color: #f74036}
+}
+
+.brand {
+    position:fixed;
+    max-width: 50px;
+    top: 20px;
+    left: 20px;
+    border-radius: 10px;
+}
+
+.success {
+    position:fixed;
+    top: 100px;
+    left: 20px;
+    font-size: 20px;
+    color: white;
+
+    animation-fill-mode: forwards;
+    animation-duration: 5s;
+    animation-name: death;
+}
+
+@keyframes death {
+    0% {opacity: 100%}
+    100% {opacity: 0%}
+}
+
+@media screen and (max-width:445px) {
+    .layout {
+        padding: 20px;
+    }  
+
+    .holder, textarea, .btn-dangerx {
+        max-width: 310px;
+        margin: auto;
+    }
+}

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% load static %}
+
+{% block body_block%}
+<img class="brand" src="{% static 'core/images/logo.png' %}" alt="logo">
+
+{% if success %}
+    <h3 class="success">Released to the moon 🚀</h3>
+{% endif %}
+
+<div class="layout">
+    <h1>emblaz<span class="ex">EX</span></h1>
+    <h3 class="title">Released news</h3>
+    <div class="holder">
+        {% for msg in messages %}
+            <p class="info">{{ msg.body }}</p><br>
+        {% endfor %}
+    </div>
+    <h3 class="title">Deputize news</h3>
+    <form action="{% url 'core:index' %}" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" class="btn btn-dangerx" value="Release">
+    </form>
+</div>
+{% endblock %}

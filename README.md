@@ -1,2 +1,23 @@
+![poster](poster.jpg)
+
 # emblazEX
-An web-based micro tool for sending and receiving awesome messages 🟨
+A web-based micro tool for releasing moonly news on verified numbers 🟥
+
+This is a quick fun project created with Django and Twilio API.
+
+<br> 
+
+# How to use
+- Verify your number in Twilio
+- Go to the application website 
+- Send moonly news to your number
+
+<br>
+
+# License
+Details can be found in [LICENSE](LICENSE)
+
+<br>
+
+# Interface
+![sick](ss.png)
