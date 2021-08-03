@@ -3,14 +3,11 @@ import os
 import django
 from twilio.rest import Client 
 from twilio.twiml.messaging_response import MessagingResponse
-import environ
 
 sys.path.append(os.getcwd())
 os.environ["DJANGO_SETTINGS_MODULE"] = "emblazEX.settings"
 django.setup()
 
-env = environ.Env()
-environ.Env.read_env()
 
 TWILIO_ACCOUNT_SID = os.environ.get("TWILIO_ACCOUNT_SID")
 TWILIO_AUTH_TOKEN = os.environ.get("TWILIO_AUTH_TOKEN")
